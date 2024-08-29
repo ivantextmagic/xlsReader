@@ -115,8 +115,8 @@ func (r *Format) GetFormatString(data structure.CellData) string {
 				t := helpers.TimeFromExcelTime(data.GetFloat64(), false)
 				dateStringReplacer := strings.NewReplacer(
 					"dd/MM/yyyy", DefaultDateFormat,
-					"HH:MM:SS", DefaultTimeFormatWithSeconds,
 					"HH:mm", DefaultTimeFormat,
+					"HH:MM:SS", DefaultTimeFormatWithSeconds,
 					"\\", "",
 				)
 				dateFormat := dateStringReplacer.Replace(r.String())
